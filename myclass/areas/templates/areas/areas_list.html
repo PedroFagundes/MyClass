@@ -1,0 +1,5 @@
+<h1>Areas cadastradas</h1>
+{% for area in areas %}
+	<p>{{ area.id }} - {{ area.nome }} <a href="{% url 'area_update' area.id %}">editar</a></p>
+{% endfor %}
+<a href="{% url 'area_create' %}">Nova area</a>

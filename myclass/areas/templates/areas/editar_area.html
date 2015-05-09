@@ -1,0 +1,6 @@
+<h1>Editar area</h1>
+<form method='POST' action="{% url 'salvar_area' area.id %}">
+	{% csrf_token %}
+	{{ form.as_p }}
+	<button type="submit">Salvar</button>
+</form>

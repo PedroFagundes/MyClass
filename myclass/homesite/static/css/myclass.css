@@ -1,0 +1,112 @@
+/* TELA DE LOGIN */
+.header_mask{
+	background-color: #0066CC;
+	min-height: 643px;
+	/*background-image: url("../imgs/header_mask_bg.jpg");*/
+}
+.logo_header_mask{
+	padding-top: 100px;
+	text-align: center;
+}
+.header_mask_text{
+	padding-top: 10px;
+	text-align: center;
+	font-size: 16px;
+	color: #FFFFFF;
+}
+.header_mask_buttons a{
+	color: #FFF;
+	text-decoration: none;
+	float: right;
+	padding-top: 16px;
+	padding-right: 16px;
+}
+.header_mask_buttons a:hover, .header_mask_buttons a:focus{
+	text-decoration: underline;
+}
+.header_mask_buttons button{
+	color: #FFFFFF;
+	background-color: transparent;
+	padding: 15px;
+	border: solid 1px;
+	/*border-color: #333333;*/
+	border-color: #00CCFF;
+	float: right;
+}
+.header_mask_buttons button:hover, .header_mask_buttons button:focus{
+	text-decoration: none;
+	background-color: #00CCFF;
+	color: #FFFFFF;
+    transition: 0.5s;
+}
+.header_menu{
+	padding-top: 100px;
+}
+.logo_header_menu{
+	text-align: center;
+}
+.header_menu_links{
+	padding-top: 6.5px;
+}
+.header_menu_links > a{
+	padding: 15px;
+	font-size: 15px;
+	border: 14.5px;
+	color: #FFFFFF;	
+}
+.header_menu_links > a:hover, .header_menu_links > a:focus{
+	text-decoration: none;
+	color: #00CCFF;
+    transition: 0.5s;
+}
+.header_menu_social, .header_menu_links{
+	text-align: center;
+	padding-top: 5px;
+}
+.login_input{
+	font-weight: bold;
+	color: #00CCFF;
+	border: solid 3px;
+	border-radius: 0px;
+	border-color: #00CCFF;
+}
+/* FIM TELA DE LOGIN */
+
+/* HOME */
+.top_header{
+	background-color: #0066CC;
+}
+.top_header > .logo{
+	padding: 10px;
+	float: left;
+}
+/*.top_header > .user_nav{
+	padding: 10px;
+	float: right;
+}*/
+/* USER_NAV */
+ .user_nav_user, .user_nav_msg, .user_nav_help{
+ 	padding-right: 15px;
+	float: right;
+}
+.user_nav_user{
+	padding-top: 10px;
+}
+.user_nav_msg{
+	padding-top: 15px;
+}
+.user_nav_help{
+	padding-top: 19.5px;
+}
+.user_nav_help > a{
+	font-weight: bold;
+	color: #FFF;
+}
+.user_nav_help > a:hover, .user_nav_help > a:focus{
+	text-decoration: none;
+	color: #00CCFF;
+    transition: 0.5s;
+}
+/* FIM USER_NAV */
+
+/* FIM HOME */

@@ -1,0 +1,85 @@
+<!-- <h1>Bem-vindo</h1>
+<a href="{% url 'lista_campus' %}">Campus</a>
+<a href="{% url 'lista_areas' %}">Areas</a>
+<a href="{% url 'lista_cursos' %}">Cursos</a>
+<a href="{% url 'lista_periodos' %}">Periodos</a>
+<a href="{% url 'lista_materias' %}">Materias</a>
+<a href="{% url 'lista_avaliacoes' %}">Avaliações</a> -->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Bem-vindo ao MyClass.</title>
+	{% load staticfiles %}
+	<link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/myclass.css' %}">
+	<script type="text/javascript" src="{% static 'js/jquery-1.11.2.min.js' %}"></script>
+	<script type="text/javascript" src="{% static 'js/bootstrap.min.js' %}"></script>
+</head>
+<body>
+	<div class="clearfix top_header">
+		{% load staticfiles %}
+		<div class="logo">
+			<img src="{% static 'imgs/logo.png' %}" alt="MyClass" height="35px" width="75px" alt="">
+		</div>
+		<div class="user_nav">
+			<div class="user_nav_user">
+				{% load staticfiles %}
+				<a href="" class="iconeusuario" data-toggle="modal" data-target="#user_modal"><img src="{% static 'imgs/icons/user.png' %}" class="img-circle" height="35px" width="35px" title="{{ user.first_name }}"></a>
+			</div>
+			<div class="user_nav_msg">
+				{% load staticfiles %}
+				<a href=""><img src="{% static 'imgs/icons/msg.png '%}" height="25px" width="25px" title="Mensagens"></a>
+			</div>
+			<div class="user_nav_help">
+				<a href="">Ajuda</a>
+			</div>
+		</div>
+	</div>
+
+	<!-- User Modal -->
+	<div class="modal fade" id="user_modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	  <div class="modal-dialog">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+	        <h4 class="modal-title" id="user_modal_label">Informações do usuario</h4>
+	      </div>
+	      <div class="modal-body">
+		      <div class="container-fuild">
+		      	<div class="row">
+			      	<div class="col-sm-2 user_photo">
+			      		{% load staticfiles %}
+			      		<a href=""><img src="{% static 'imgs/icons/user.png' %}" alt="" width="96px" height="96px" data-toggle="tooltip" data-placement="bottom" title="Clique para alterar a foto"></a>
+			      	</div>
+			      	<div class="col-sm-9 user_info">
+			      		<div class="user-name">
+			      			<strong>{{ user.first_name }} {{ user.last_name }}</strong>
+			      		</div>
+			      		<div class="user-email">
+			      			{{ user.email }}
+			      		</div>
+			      		<div class="edit_profile">
+			      			<a href="">Editar perfil</a>
+			      		</div>
+			      	</div>
+		      	</div>
+		      </div>
+	      </div>
+	      <div class="modal-footer">
+	        <!-- <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button> -->
+	        <button type="button" class="btn btn-danger" onclick="location.href='{% url 'django.contrib.auth.views.logout' %}'">Logout</button>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+	<!-- FIM User Modal -->
+
+
+<script>
+	$(function () {
+  		$('[data-toggle="tooltip"]').tooltip()
+	})
+</script>
+</body>
+</html>

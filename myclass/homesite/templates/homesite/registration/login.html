@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Bem-vindo ao MyClass.</title>
+	{% load staticfiles %}
+	<link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/myclass.css' %}">
+	<script type="text/javascript" src="{% static 'js/jquery-1.11.2.min.js' %}"></script>
+	<script type="text/javascript" src="{% static 'js/bootstrap.min.js' %}"></script>
+</head>
+<body>
+	<div class="header_mask">
+	<div class="container-fluid">
+		<div class="row header_mask_content">
+			<!-- Dão espaço para centralizar o conteudo do header_mask -->
+			<div class="col-sm-4"></div>
+			<!-- FIM div centraliza header_mask -->
+			<div class="container-fluid col-sm-4 main_content_header_mask">
+				<div class="logo_header_mask">
+					{% load staticfiles %}
+					<a href="" title="Home"><img src="{% static 'imgs/logo02.png' %}" width="250px" height="130px"></a>
+				</div>
+				<div class="header_mask_text">
+					{% if form.errors %}
+						<div class="alert alert-danger fade in alert-dismissible" role="alert">
+							<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+							<span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span> Seu <strong>usuário</strong> ou <strong>senha</strong> estão incorretos. Por favor, tente novamente.
+						</div>
+					{% endif %}
+					{% if mensagem %}
+						<div class="alert alert-danger" role="alert">{{ mensagem }}</div>
+					{% elif sucesso %}
+						<div class="alert alert-success" role="alert">{{ sucesso }}</div>
+					{% endif %}
+					<form method="post" action="">
+						{% csrf_token %}
+						<div class="form-group">
+							<input id="id_username" class="form-control login_input" maxlength="254" name="username" type="text" placeholder="Usuário">
+						</div>
+						<div class="form-group">
+							<input id="id_password" class="form-control login_input" name="password" type="password" placeholder="Senha">
+						</div>
+						<div class="header_mask_buttons">
+							<button type="submit">Entrar</button>
+							<a href="">Esqueci a senha</a>
+							<!-- <a href="" onclick="document.forms[0].submit();return false;">Entrar</a> -->
+						</div>
+					</form>
+				</div>
+			</div>
+			<!-- Dão espaço para centralizar o conteudo do header_mask -->
+			<div class="col-sm-4"></div>
+			<!-- FIM div centraliza header_mask -->
+		</div>
+		<div class="row header_menu">
+			<div class="container">
+				<div class="col-sm-4 logo_header_menu">{% load staticfiles %}<a href="" title="ItWorks!"><img src="{% static 'imgs/itworks_logo02.png' %}" width="150" height="60px"></a></div>
+				<div class="col-sm-4 header_menu_links">
+						<a href="">Home</a>
+						<a href="">Sobre</a>
+						<a href="">Features</a>
+						<a href="">Contato</a>
+				</div>
+				<div class="col-sm-4 header_menu_social">
+					{% load staticfiles %}<a href="" title="Home"><img src="{% static 'imgs/icons/facebook.png' %}" width="50" height="50"></a>
+					<a href="" title="Home"><img src="{% static 'imgs/icons/instagram.png' %}" width="50" height="50"></a>
+					<a href="" title="Home"><img src="{% static 'imgs/icons/twitter.png' %}" width="50" height="50"></a>
+					<a href="" title="Home"><img src="{% static 'imgs/icons/g+.png' %}" width="50" height="50"></a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- FIM HEADER_MASK -->		
+	</div>
+</body>
+</html>
