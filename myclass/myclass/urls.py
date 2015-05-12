@@ -13,5 +13,8 @@ urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
     # url(r'^home/$', views.home, name='home'),
 
-	url(r'^areas/', include('areas.urls'), name = 'areas')
+	url(r'^areas/', include('areas.urls'), name = 'areas'),
+	url(r'^campus/', include('campus.urls'), name = 'campus'),
+	url(r'^cursos/', include('cursos.urls'), name = 'cursos'),
+    url(r'^materias/', include('materias.urls'), name='materias')
 ]

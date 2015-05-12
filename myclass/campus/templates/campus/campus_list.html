@@ -1,0 +1,5 @@
+<h1>Campus cadastrados</h1>
+{% for campus in campuss %}
+	<p>{{ campus.id }} - {{ campus.nome }} <a href="{% url 'campus_update' campus.id %}">editar</a></p>
+{% endfor %}
+<a href="{% url 'campus_create' %}">Novo campus</a>

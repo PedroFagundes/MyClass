@@ -1,0 +1,4 @@
+<h1>Cursos cadastrados</h1>
+{% for curso in cursos %}
+	<p>{{ curso.id }} - {{ curso.nome }} - <a href="{% url 'curso_update' curso.id %}">editar</a></p>
+{% endfor %}

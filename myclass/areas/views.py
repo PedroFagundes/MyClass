@@ -4,7 +4,7 @@ from django.core.urlresolvers import reverse_lazy
 
 from .models import Areas
 
-# Create your views here.
+
 class AreaListView(ListView):
     model = Areas
     fields = '__all__'

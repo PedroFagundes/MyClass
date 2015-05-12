@@ -41,6 +41,9 @@ INSTALLED_APPS = (
     'myclass',
     'homesite',
     'areas',
+    'campus',
+    'cursos',
+    'materias',
 )
 
 MIDDLEWARE_CLASSES = (
