@@ -110,3 +110,14 @@
 /* FIM USER_NAV */
 
 /* FIM HOME */
+
+/* SIDE_MENU */
+.side_menu_arrow{
+	float: right;
+}
+.panel-default>.panel-heading:hover{
+	background-color: #0066CC;
+	color: #FFF;
+	text-decoration: none;
+}
+/* END SIDE_MENU */
